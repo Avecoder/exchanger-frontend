@@ -30,7 +30,7 @@ const QRscan = ({t, setShowQR}) => {
 
 
     return (
-        <div className='fixed h-[100vh] sm:w-[400px] w-[100%] py-20 px-10 right-0 top-0 bg-[#ecebea] flex flex-col gap-10'>
+        <div className='z-20 fixed h-[100vh] sm:w-[400px] w-[100%] py-20 px-10 right-0 top-0 bg-[#ecebea] flex flex-col gap-10'>
             <h2 className='font-medium text-[24px] text-black'>{t.connect.qrTitle}</h2>
             <div>
                 {
@@ -38,6 +38,7 @@ const QRscan = ({t, setShowQR}) => {
                     <QrReader
                         delay={300}
                         ref={qrRef}
+                        constraints={{facingMode: 'environment'}}
                         onError={handleError}
                         onScan={handleScan}
                         onResult={handleResult}

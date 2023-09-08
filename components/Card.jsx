@@ -2,6 +2,7 @@
 import {Button} from './'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
+import Image from 'next/image'
 
 const Card = ({
     data: {
@@ -58,7 +59,7 @@ const Card = ({
                     :
                     <div className="flex gap-3">
                         <span>{changeIn}</span>
-                        <img src="/exch.svg" alt="exch" />
+                        <Image src="/exch.svg" alt="exch" width={17} height={13} />
                         <span>{changeOut}</span>
                     </div>
                 }
