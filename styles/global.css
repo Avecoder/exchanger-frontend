@@ -74,6 +74,7 @@
   }
   .mobile-menu {
       display: block !important;
+      color: #fff !important;
   }
 }
 
@@ -82,4 +83,5 @@
 }
 .mobile-menu {
   display: none;
+  color: #fff !important;
 }
